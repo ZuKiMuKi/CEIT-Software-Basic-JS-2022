@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Elements EX</title>
+</head>
+
+<body>
+    <ul id="List">
+
+    </ul>
+    <button onclick="addChildElement()">Add</button>
+    <button onclick="removeChildElement()">Remove</button>
+    <script>
+        const ul = document.getElementById("List");
+
+        var count = 0;
+
+        function addChildElement() {
+            count++;
+            let text = document.createTextNode(count);
+            let li = document.createElement("li");
+            li.setAttribute("id", count);
+            li.appendChild(text);
+            ul.appendChild(li);
+        }
+        function removeChildElement() {
+            if (count > 0) {
+                let item = document.getElementById(count);
+                ul.removeChild(item);
+                count--;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set & Remove Attribute EX</title>
+</head>
+
+<body>
+    <input id="todo" type="text" readonly>
+    <button id="edit" onclick="editTodo()">edit</button>
+    <button id="save" onclick="saveTodo()" disabled>save</button>
+    <script>
+        const todo = document.getElementById("todo")
+        const edit = document.getElementById("edit")
+        const save = document.getElementById("save")
+        function editTodo() {
+            todo.removeAttribute("readonly")
+            edit.setAttribute("disabled", "")
+            save.removeAttribute("disabled")
+        }
+        function saveTodo(){
+            todo.setAttribute("readonly", "")
+            edit.removeAttribute("disabled")
+            save.setAttribute("disabled", "")
+        }
+    </script>
+</body>
+
+</html>
