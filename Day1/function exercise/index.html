@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //function
+        function triangle(h, b) {
+            let area = (h * b) / 2
+            return "The area is " + area
+        }
+
+        function circle(r) {
+            let area = (3.14) * r * r
+            return "The area is " + area
+        }
+
+        function rectangle(h, w) {
+            let area = h * w
+            return "The area is " + area
+        }
+
+        //conditions
+        let x = prompt("1: Triangle\n" + "2: circle\n" + "3: rectangle")
+        if (x == 1) {
+            let h = prompt("height: ")
+            let b = prompt("Base: ")
+            alert(triangle(h, b))
+        } else if (x == 2) {
+            let r = prompt("radius: ")
+            alert(circle(r))
+        } else if (x == 3) {
+            let h = prompt("height: ")
+            let w = prompt("width: ")
+            alert(rectangle(h, w))
+        } else {
+            alert("Pls select 1-3")
+        }
+    </script>
+</body>
+
+</html>
